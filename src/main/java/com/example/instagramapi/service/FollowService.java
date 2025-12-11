@@ -83,7 +83,7 @@ public class FollowService {
                 .orElseThrow(() -> new CustomException(ErrorCode.USER_NOT_FOUND));
 
         return followRepository.findFollowersByFollowingId(user.getId()).stream()
-                .map(follow -> UserResponse.from(follow.getFollowing()))
+                .map(follow -> UserResponse.from(follow.getFollower()))
                 .toList();
     }
 
