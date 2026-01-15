@@ -20,6 +20,7 @@ services:
 
   api:
     build: .
+    image: change5/insta-back:1.0.0
     container_name: insta-api
     environment:
       SPRING_PROFILES_ACTIVE: docker
